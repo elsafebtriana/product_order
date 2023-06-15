@@ -1,0 +1,27 @@
+server:
+  port: 8060
+  error:
+    include-message: always
+spring:
+  application:
+    name: product-order
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sales_elsa_febtriana
+    username: postgres
+    password: admin
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: false
+        dialect: org.hibernate.dialect.PostgreSQL81Dialect
+  jackson:
+    property_naming_strategy: SNAKE_CASE
+    serialization:
+      fail_on_empty_beans: false
+bezkoder:
+  app:
+    jwtSecret: bezKoderSecretKey
+    jwtExpirationMs: 86400000
